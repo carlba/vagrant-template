@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # My config
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "bento/centos-6.7"
+  config.vm.box = "bento/centos-7.1"
   config.vm.provision :shell, :path => "bootstrap.sh", :args => VAGRANT_NAME
   config.vm.provision :shell, :path => "specific_bootstrap.sh", :args => VAGRANT_NAME
 
