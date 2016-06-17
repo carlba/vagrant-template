@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
 
-  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "private_network", type: "dhcp", nic_type: "virtio"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -59,7 +59,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
    # Use VBoxManage to customize the VM. For example to change memory:
    vb.customize ["modifyvm", :id, "--memory", "1024"]
-   vb.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
   end
 
   config.vm.hostname = VAGRANT_NAME + ".vagrant.dev"
