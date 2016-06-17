@@ -49,7 +49,6 @@ gpgcheck=0
 EOM
 
 yum --enablerepo=epel -y install epel-release
-sudo sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo
 rm -f /etc/yum.repos.d/epel-bootstrap.repo
 
 }
@@ -106,7 +105,7 @@ yum -y install man wget
 [[ "$install_remi" == yes ]] && install_remi
 [[ "$install_epel" == yes ]] && install_epel
 
-install_tmux_1.9
+#install_tmux_1.9
 
 permit_root
 
