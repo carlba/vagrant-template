@@ -9,7 +9,7 @@ current_dir=$PWD
 tmp_dir=$(mktemp -d)
 
 cd $tmp_dir
-yum install -y git
+yum install -y git bash-completion tmux htop multitail
 
 git clone https://github.com/carlba/linux_install
 
